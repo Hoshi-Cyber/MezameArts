@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "{{title}}",
+  "description": "{{description}}",
+  "image": [
+    "{{imageUrl}}"
+  ],
+  "brand": "Mezame Arts",
+  "sku": "{{id}}",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "{{currency}}",
+    "price": "{{price}}",
+    "availability": "https://schema.org/{{availability}}",
+    "url": "https://mezamearts.com/artworks/{{slug}}"
+  }
+}

@@ -1,0 +1,289 @@
+openapi: 3.0.3
+info:
+  title: Mezame Arts API
+  version: 1.0.0
+  description: REST API for marketplace operations.
+servers:
+  - url: https://api.mezamearts.com/v1
+    description: Production
+  - url: https://staging.api.mezamearts.com/v1
+    description: Staging
+tags:
+  - name: Auth
+  - name: Artists
+  - name: Artworks
+  - name: Search
+  - name: Cart
+  - name: Checkout
+  - name: Orders
+  - name: Payouts
+  - name: Admin
+  - name: Webhooks
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  parameters:
+    PageParam:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+    LimitParam:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+  schemas:
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code: { type: string }
+        message: { type: string }
+        details: { type: object }
+    Artist:
+      $ref: '../../content/schemas/artist.schema.json'
+    Artwork:
+      $ref: '../../content/schemas/artwork.schema.json'
+    Order:
+      $ref: '../../content/schemas/order.schema.json'
+paths:
+  /auth/register:
+    post:
+      tags: [Auth]
+      summary: Register buyer or artist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password, role]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string, minLength: 8 }
+                role: { type: string, enum: [buyer, artist] }
+      responses:
+        '201': { description: Created }
+        '400': { description: Bad Request, content: { application/json: { schema: { $ref: '#/components/schemas/Error' } } } }
+  /auth/login:
+    post:
+      tags: [Auth]
+      summary: Authenticate user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, format: email }
+                password: { type: string }
+      responses:
+        '200': { description: OK }
+        '401': { description: Unauthorized }
+  /auth/refresh:
+    post:
+      tags: [Auth]
+      summary: Refresh JWT
+      responses:
+        '200': { description: OK }
+        '401': { description: Unauthorized }
+  /artists:
+    get:
+      tags: [Artists]
+      summary: List artists
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Artists]
+      summary: Create artist profile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Artist' }
+      responses:
+        '201': { description: Created }
+  /artists/{id}:
+    get:
+      tags: [Artists]
+      summary: Get artist by id
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Artist' } } } }
+        '404': { description: Not Found }
+    put:
+      tags: [Artists]
+      summary: Update artist
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/Artist' } } }
+      responses:
+        '200': { description: Updated }
+  /artworks:
+    get:
+      tags: [Artworks]
+      summary: List artworks
+      parameters:
+        - $ref: '#/components/parameters/PageParam'
+        - $ref: '#/components/parameters/LimitParam'
+        - name: category
+          in: query
+          schema: { type: string }
+        - name: priceMin
+          in: query
+          schema: { type: number }
+        - name: priceMax
+          in: query
+          schema: { type: number }
+      responses:
+        '200': { description: OK }
+    post:
+      tags: [Artworks]
+      summary: Create artwork listing
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/Artwork' } } }
+      responses:
+        '201': { description: Created }
+  /artworks/{id}:
+    get:
+      tags: [Artworks]
+      summary: Get artwork
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      responses:
+        '200': { description: OK }
+        '404': { description: Not Found }
+    put:
+      tags: [Artworks]
+      summary: Update artwork
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '#/components/schemas/Artwork' } } }
+      responses:
+        '200': { description: Updated }
+    delete:
+      tags: [Artworks]
+      summary: Delete artwork
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      responses:
+        '204': { description: No Content }
+  /search:
+    get:
+      tags: [Search]
+      summary: Search artworks and artists
+      parameters:
+        - name: q
+          in: query
+          schema: { type: string }
+      responses:
+        '200': { description: OK }
+  /cart:
+    post:
+      tags: [Cart]
+      summary: Create cart
+      responses:
+        '201': { description: Created }
+  /cart/{id}:
+    put:
+      tags: [Cart]
+      summary: Update cart
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                items:
+                  type: array
+                  items:
+                    type: object
+                    required: [artworkId, qty]
+                    properties:
+                      artworkId: { type: string }
+                      qty: { type: integer, minimum: 1 }
+      responses:
+        '200': { description: OK }
+  /checkout:
+    post:
+      tags: [Checkout]
+      summary: Initiate checkout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                cartId: { type: string }
+      responses:
+        '200': { description: OK }
+  /orders:
+    post:
+      tags: [Orders]
+      summary: Create order after successful payment
+      responses:
+        '201': { description: Created, content: { application/json: { schema: { $ref: '#/components/schemas/Order' } } } }
+    get:
+      tags: [Orders]
+      summary: List orders for current user
+      responses:
+        '200': { description: OK }
+  /orders/{id}:
+    get:
+      tags: [Orders]
+      summary: Get order by id
+      parameters: [ { name: id, in: path, required: true, schema: { type: string } } ]
+      responses:
+        '200': { description: OK, content: { application/json: { schema: { $ref: '#/components/schemas/Order' } } } }
+        '404': { description: Not Found }
+  /payouts:
+    post:
+      tags: [Payouts]
+      summary: Initiate payout for artist
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [artistId, amount, currency]
+              properties:
+                artistId: { type: string }
+                amount: { type: number, minimum: 1 }
+                currency: { type: string }
+      responses:
+        '202': { description: Accepted }
+  /webhooks/payments:
+    post:
+      tags: [Webhooks]
+      summary: Payment provider webhook
+      responses:
+        '200': { description: OK }
+  /admin/listings/pending:
+    get:
+      tags: [Admin]
+      summary: List pending listings for moderation
+      responses:
+        '200': { description: OK }

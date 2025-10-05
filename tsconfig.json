@@ -1,0 +1,17 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "moduleResolution": "Node16",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@mezame/ui": ["packages/ui/src"],
+      "@mezame/types": ["packages/types/src"],
+      "@mezame/analytics": ["packages/analytics/src"],
+      "@mezame/config": ["packages/config/src"]
+    }
+  },
+  "include": ["packages/**/*", "apps/**/*"]
+}

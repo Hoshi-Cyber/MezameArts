@@ -1,0 +1,14 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{title}}",
+  "image": [
+    "{{coverImage}}"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "{{author}}"
+  },
+  "datePublished": "{{publishedAt}}",
+  "mainEntityOfPage": "https://mezamearts.com/insights/{{slug}}"
+}

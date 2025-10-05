@@ -1,0 +1,18 @@
+role,scope,permission,description
+guest,site,read,Read public pages
+guest,artwork,read,View artworks and artists
+buyer,cart,create,Create cart
+buyer,cart,update,Add/update/remove items
+buyer,order,create,Place order after payment
+buyer,order,read,View own orders
+artist,profile,create,Create artist profile
+artist,profile,update,Update own profile
+artist,artwork,create,Create listings
+artist,artwork,update,Update own listings
+artist,artwork,delete,Delete own listings
+artist,payout,create,Request payouts
+admin,any,read,Read all data except secrets
+admin,any,update,Moderate listings and users
+admin,refunds,update,Process refunds
+admin,disputes,update,Resolve disputes
+admin,config,update,Manage feature flags and settings

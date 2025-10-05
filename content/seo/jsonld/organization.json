@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mezame Arts",
+  "url": "https://mezamearts.com",
+  "logo": "https://mezamearts.com/static/logo.png"
+}

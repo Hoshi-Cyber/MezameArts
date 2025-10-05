@@ -1,0 +1,11 @@
+device,os,os_version,viewport_width,viewport_height,browsers
+iPhone SE,iOS,latest,320,568,Safari, Chrome
+iPhone 14 Pro,iOS,latest,430,932,Safari, Chrome
+iPad Pro 11,iPadOS,latest,834,1194,Safari, Chrome
+Pixel 5,Android,latest,393,851,Chrome, Firefox
+Galaxy S22,Android,latest,412,915,Chrome, Samsung Internet
+MacBook Air,macOS,latest,1440,900,Chrome, Safari, Firefox
+Windows Laptop,Windows 11,latest,1366,768,Chrome, Edge, Firefox
+Desktop HD,Windows 11,latest,1920,1080,Chrome, Edge, Firefox, Safari
+Desktop WQHD,macOS,latest,2560,1440,Chrome, Safari, Firefox
+UltraWide,Windows 11,latest,3440,1440,Chrome, Edge

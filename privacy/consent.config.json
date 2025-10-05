@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "banner": {
+    "position": "bottom",
+    "behavior": "opt_in",
+    "languages": [
+      "en"
+    ],
+    "links": {
+      "privacy": "/legal/privacy-policy",
+      "cookies": "/legal/cookies-policy"
+    }
+  },
+  "categories": {
+    "essential": {
+      "default": true,
+      "storage": "first_party",
+      "description": "Authentication, security, load balancing"
+    },
+    "functional": {
+      "default": false,
+      "storage": "first_party",
+      "description": "Preferences such as locale and currency"
+    },
+    "analytics": {
+      "default": false,
+      "storage": "first_party",
+      "consentMode": "analytics_storage",
+      "description": "Usage measurement via GA4 (server-side)"
+    },
+    "marketing": {
+      "default": false,
+      "storage": "third_party",
+      "consentMode": "ad_storage",
+      "description": "Remarketing and ad attribution"
+    }
+  },
+  "gtm": {
+    "containerId": "GTM-XXXXXXX",
+    "serverContainerUrl": "https://gtm.mezamearts.com",
+    "dataLayerName": "dataLayer",
+    "consentDefaults": {
+      "ad_storage": "denied",
+      "analytics_storage": "denied",
+      "ad_user_data": "denied",
+      "ad_personalization": "denied"
+    }
+  }
+}

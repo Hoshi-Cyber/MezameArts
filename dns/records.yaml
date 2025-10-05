@@ -1,0 +1,43 @@
+# DNS and edge records for mezamearts.com
+zone: mezamearts.com
+records:
+  - type: A
+    name: @
+    value: 203.0.113.10    # replace with load balancer
+    ttl: 300
+  - type: A
+    name: www
+    value: 203.0.113.10
+    ttl: 300
+  - type: CNAME
+    name: assets
+    value: dxxxxxxxxxxxx.cloudfront.net
+    ttl: 300
+  - type: TXT
+    name: _amazonses
+    value: amazonses-verification-token
+    ttl: 300
+  - type: MX
+    name: @
+    value: 10 inbound-smtp.provider.com.
+    ttl: 300
+  - type: CNAME
+    name: _dmarc
+    value: "v=DMARC1; p=quarantine; rua=mailto:dmarc@mezamearts.com; ruf=mailto:dmarc@mezamearts.com; fo=1"
+    ttl: 300
+  - type: TXT
+    name: @
+    value: "v=spf1 include:spf.sendprovider.com -all"
+    ttl: 300
+  - type: TXT
+    name: default._domainkey
+    value: "v=DKIM1; k=rsa; p=REPLACE_WITH_PUBLIC_KEY"
+    ttl: 300
+  - type: CNAME
+    name: gtm
+    value: gtm-server.example.com
+    ttl: 300
+  - type: CNAME
+    name: api
+    value: api-edge.example.com
+    ttl: 300

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://mezamearts.com/schemas/events.schema.json",
+  "meta": {
+    "generated": "2025-10-02T17:23:41.462845"
+  },
+  "events": {
+    "page_view": {
+      "props": {
+        "path": "string",
+        "referrer": "string",
+        "locale": "string"
+      }
+    },
+    "artwork_view": {
+      "props": {
+        "artworkId": "string",
+        "category": "string",
+        "price": "number",
+        "currency": "string"
+      }
+    },
+    "add_to_cart": {
+      "props": {
+        "artworkId": "string",
+        "qty": "number",
+        "value": "number",
+        "currency": "string"
+      }
+    },
+    "checkout_start": {
+      "props": {
+        "cartId": "string",
+        "total": "number",
+        "currency": "string",
+        "items": "number"
+      }
+    },
+    "purchase": {
+      "props": {
+        "orderId": "string",
+        "value": "number",
+        "currency": "string",
+        "paymentMethod": "string"
+      }
+    },
+    "artist_signup": {
+      "props": {
+        "artistId": "string",
+        "verified": "boolean"
+      }
+    },
+    "payout_initiated": {
+      "props": {
+        "artistId": "string",
+        "amount": "number",
+        "currency": "string"
+      }
+    },
+    "search": {
+      "props": {
+        "query": "string",
+        "results": "number"
+      }
+    },
+    "filter_applied": {
+      "props": {
+        "facet": "string",
+        "value": "string"
+      }
+    }
+  },
+  "privacy": {
+    "consentRequired": [
+      "analytics",
+      "marketing"
+    ],
+    "pii": {
+      "page_view": false,
+      "purchase": false
+    }
+  }
+}

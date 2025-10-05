@@ -1,0 +1,42 @@
+[
+  {
+    "id": "tag_01",
+    "name": "Abstract"
+  },
+  {
+    "id": "tag_02",
+    "name": "Minimalist"
+  },
+  {
+    "id": "tag_03",
+    "name": "Monochrome"
+  },
+  {
+    "id": "tag_04",
+    "name": "Portrait"
+  },
+  {
+    "id": "tag_05",
+    "name": "Landscape"
+  },
+  {
+    "id": "tag_06",
+    "name": "Street"
+  },
+  {
+    "id": "tag_07",
+    "name": "Nature"
+  },
+  {
+    "id": "tag_08",
+    "name": "Concept"
+  },
+  {
+    "id": "tag_09",
+    "name": "Surreal"
+  },
+  {
+    "id": "tag_10",
+    "name": "Geometric"
+  }
+]

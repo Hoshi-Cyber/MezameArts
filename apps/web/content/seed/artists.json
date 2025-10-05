@@ -1,0 +1,142 @@
+[
+  {
+    "id": "artist_001",
+    "name": "Artist 1",
+    "slug": "artist-1",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "USA",
+    "website": "https://example.com/artist-1",
+    "social": {
+      "instagram": "https://instagram.com/artist-1"
+    },
+    "avatar": "https://picsum.photos/seed/artist_001/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437801"
+  },
+  {
+    "id": "artist_002",
+    "name": "Artist 2",
+    "slug": "artist-2",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Nigeria",
+    "website": "https://example.com/artist-2",
+    "social": {
+      "instagram": "https://instagram.com/artist-2"
+    },
+    "avatar": "https://picsum.photos/seed/artist_002/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437815"
+  },
+  {
+    "id": "artist_003",
+    "name": "Artist 3",
+    "slug": "artist-3",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "USA",
+    "website": "https://example.com/artist-3",
+    "social": {
+      "instagram": "https://instagram.com/artist-3"
+    },
+    "avatar": "https://picsum.photos/seed/artist_003/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437820"
+  },
+  {
+    "id": "artist_004",
+    "name": "Artist 4",
+    "slug": "artist-4",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "UK",
+    "website": "https://example.com/artist-4",
+    "social": {
+      "instagram": "https://instagram.com/artist-4"
+    },
+    "avatar": "https://picsum.photos/seed/artist_004/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437824"
+  },
+  {
+    "id": "artist_005",
+    "name": "Artist 5",
+    "slug": "artist-5",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Australia",
+    "website": "https://example.com/artist-5",
+    "social": {
+      "instagram": "https://instagram.com/artist-5"
+    },
+    "avatar": "https://picsum.photos/seed/artist_005/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437827"
+  },
+  {
+    "id": "artist_006",
+    "name": "Artist 6",
+    "slug": "artist-6",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Brazil",
+    "website": "https://example.com/artist-6",
+    "social": {
+      "instagram": "https://instagram.com/artist-6"
+    },
+    "avatar": "https://picsum.photos/seed/artist_006/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437830"
+  },
+  {
+    "id": "artist_007",
+    "name": "Artist 7",
+    "slug": "artist-7",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "India",
+    "website": "https://example.com/artist-7",
+    "social": {
+      "instagram": "https://instagram.com/artist-7"
+    },
+    "avatar": "https://picsum.photos/seed/artist_007/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437833"
+  },
+  {
+    "id": "artist_008",
+    "name": "Artist 8",
+    "slug": "artist-8",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Canada",
+    "website": "https://example.com/artist-8",
+    "social": {
+      "instagram": "https://instagram.com/artist-8"
+    },
+    "avatar": "https://picsum.photos/seed/artist_008/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437838"
+  },
+  {
+    "id": "artist_009",
+    "name": "Artist 9",
+    "slug": "artist-9",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Canada",
+    "website": "https://example.com/artist-9",
+    "social": {
+      "instagram": "https://instagram.com/artist-9"
+    },
+    "avatar": "https://picsum.photos/seed/artist_009/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437842"
+  },
+  {
+    "id": "artist_010",
+    "name": "Artist 10",
+    "slug": "artist-10",
+    "bio": "Minimalist, premium-focused contemporary artist.",
+    "country": "Brazil",
+    "website": "https://example.com/artist-10",
+    "social": {
+      "instagram": "https://instagram.com/artist-10"
+    },
+    "avatar": "https://picsum.photos/seed/artist_010/400/400",
+    "verified": true,
+    "createdAt": "2025-10-02T17:23:41.437846"
+  }
+]

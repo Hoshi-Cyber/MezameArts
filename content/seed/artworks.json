@@ -1,0 +1,278 @@
+[
+  {
+    "id": "art_001",
+    "title": "Untitled 1",
+    "slug": "untitled-1-1",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "sculpture",
+    "tags": [
+      "Street",
+      "Concept",
+      "Landscape"
+    ],
+    "price": 849.76,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_001/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_007",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439190"
+  },
+  {
+    "id": "art_002",
+    "title": "Untitled 2",
+    "slug": "untitled-2-2",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "photography",
+    "tags": [
+      "Street",
+      "Minimalist",
+      "Monochrome"
+    ],
+    "price": 575.87,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_002/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_002",
+    "featured": false,
+    "createdAt": "2025-10-02T17:23:41.439207"
+  },
+  {
+    "id": "art_003",
+    "title": "Untitled 3",
+    "slug": "untitled-3-3",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "sculpture",
+    "tags": [
+      "Minimalist",
+      "Portrait",
+      "Landscape"
+    ],
+    "price": 661.41,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_003/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_005",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439216"
+  },
+  {
+    "id": "art_004",
+    "title": "Untitled 4",
+    "slug": "untitled-4-4",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "painting",
+    "tags": [
+      "Surreal",
+      "Monochrome",
+      "Landscape"
+    ],
+    "price": 228.33,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_004/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_005",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439224"
+  },
+  {
+    "id": "art_005",
+    "title": "Untitled 5",
+    "slug": "untitled-5-5",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "sculpture",
+    "tags": [
+      "Monochrome",
+      "Concept",
+      "Minimalist"
+    ],
+    "price": 2197.07,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_005/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_009",
+    "featured": false,
+    "createdAt": "2025-10-02T17:23:41.439242"
+  },
+  {
+    "id": "art_006",
+    "title": "Untitled 6",
+    "slug": "untitled-6-6",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "digital",
+    "tags": [
+      "Concept",
+      "Street",
+      "Monochrome"
+    ],
+    "price": 2417.88,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_006/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_008",
+    "featured": false,
+    "createdAt": "2025-10-02T17:23:41.439250"
+  },
+  {
+    "id": "art_007",
+    "title": "Untitled 7",
+    "slug": "untitled-7-7",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "painting",
+    "tags": [
+      "Minimalist",
+      "Nature",
+      "Concept"
+    ],
+    "price": 296.32,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_007/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_008",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439258"
+  },
+  {
+    "id": "art_008",
+    "title": "Untitled 8",
+    "slug": "untitled-8-8",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "photography",
+    "tags": [
+      "Geometric",
+      "Landscape",
+      "Minimalist"
+    ],
+    "price": 2485.53,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_008/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_003",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439269"
+  },
+  {
+    "id": "art_009",
+    "title": "Untitled 9",
+    "slug": "untitled-9-9",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "digital",
+    "tags": [
+      "Geometric",
+      "Portrait",
+      "Nature"
+    ],
+    "price": 1192.22,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_009/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_009",
+    "featured": false,
+    "createdAt": "2025-10-02T17:23:41.439277"
+  },
+  {
+    "id": "art_010",
+    "title": "Untitled 10",
+    "slug": "untitled-10-10",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "digital",
+    "tags": [
+      "Landscape",
+      "Abstract",
+      "Minimalist"
+    ],
+    "price": 2375.26,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_010/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_005",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439285"
+  },
+  {
+    "id": "art_011",
+    "title": "Untitled 11",
+    "slug": "untitled-11-11",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "sculpture",
+    "tags": [
+      "Minimalist",
+      "Monochrome",
+      "Portrait"
+    ],
+    "price": 533.68,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_011/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_004",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439295"
+  },
+  {
+    "id": "art_012",
+    "title": "Untitled 12",
+    "slug": "untitled-12-12",
+    "description": "Premium minimalist artwork for marketplace visualization.",
+    "category": "painting",
+    "tags": [
+      "Nature",
+      "Concept",
+      "Surreal"
+    ],
+    "price": 813.2,
+    "currency": "USD",
+    "dimensions": "60 x 80 cm",
+    "medium": "Mixed media",
+    "images": [
+      "https://picsum.photos/seed/art_012/1200/900"
+    ],
+    "availability": "in_stock",
+    "artistId": "artist_003",
+    "featured": true,
+    "createdAt": "2025-10-02T17:23:41.439306"
+  }
+]

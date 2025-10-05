@@ -1,0 +1,24 @@
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mezamearts.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{level2Name}}",
+      "item": "{{level2Url}}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{level3Name}}",
+      "item": "{{level3Url}}"
+    }
+  ]
+}

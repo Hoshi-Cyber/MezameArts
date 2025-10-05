@@ -1,0 +1,11 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Mezame Arts",
+  "url": "https://mezamearts.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://mezamearts.com/search?q={query}",
+    "query-input": "required name=query"
+  }
+}

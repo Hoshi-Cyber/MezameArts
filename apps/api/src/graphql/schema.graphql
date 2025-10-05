@@ -1,0 +1,149 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+scalar DateTime
+
+type Query {
+  me: User
+  artist(id: ID!): Artist
+  artists(page: Int = 1, limit: Int = 20): [Artist!]!
+  artwork(id: ID!): Artwork
+  artworks(category: String, page: Int = 1, limit: Int = 20): [Artwork!]!
+  search(q: String!): SearchResult!
+  orders: [Order!]!
+}
+
+type Mutation {
+  registerUser(email: String!, password: String!, role: Role!): AuthPayload!
+  login(email: String!, password: String!): AuthPayload!
+  refresh: AuthPayload!
+  createArtist(input: ArtistInput!): Artist!
+  updateArtist(id: ID!, input: ArtistInput!): Artist!
+  createArtwork(input: ArtworkInput!): Artwork!
+  updateArtwork(id: ID!, input: ArtworkInput!): Artwork!
+  deleteArtwork(id: ID!): Boolean!
+  createCart: Cart!
+  updateCart(id: ID!, items: [CartItemInput!]!): Cart!
+  checkout(cartId: ID!): CheckoutPayload!
+  createOrder(input: CreateOrderInput!): Order!
+  initiatePayout(artistId: ID!, amount: Float!, currency: String!): Payout!
+}
+
+enum Role { guest buyer artist admin }
+
+type User {
+  id: ID!
+  email: String!
+  role: Role!
+}
+
+type Artist {
+  id: ID!
+  name: String!
+  slug: String!
+  bio: String
+  country: String
+  website: String
+  avatar: String
+  verified: Boolean!
+  createdAt: DateTime!
+  artworks: [Artwork!]!
+}
+
+input ArtistInput {
+  name: String!
+  slug: String!
+  bio: String
+  country: String
+  website: String
+  avatar: String
+  verified: Boolean
+}
+
+type Artwork {
+  id: ID!
+  title: String!
+  slug: String!
+  description: String
+  category: String
+  tags: [String!]
+  price: Float!
+  currency: String!
+  dimensions: String
+  medium: String
+  images: [String!]!
+  availability: String!
+  artist: Artist!
+  featured: Boolean
+  createdAt: DateTime!
+  updatedAt: DateTime
+}
+
+input ArtworkInput {
+  title: String!
+  slug: String!
+  description: String
+  category: String
+  tags: [String!]
+  price: Float!
+  currency: String!
+  dimensions: String
+  medium: String
+  images: [String!]!
+  availability: String!
+  artistId: ID!
+  featured: Boolean
+}
+
+type CartItem { artworkId: ID!, qty: Int! }
+input CartItemInput { artworkId: ID!, qty: Int! }
+type Cart { id: ID!, items: [CartItem!]!, total: Float!, currency: String! }
+
+type CheckoutPayload { clientSecret: String, redirectUrl: String }
+
+input CreateOrderInput {
+  buyerId: ID!
+  artistId: ID!
+  items: [OrderItemInput!]!
+  total: Float!
+  currency: String!
+  paymentId: String!
+}
+
+type Order {
+  id: ID!
+  buyerId: ID!
+  artistId: ID!
+  items: [OrderItem!]!
+  total: Float!
+  currency: String!
+  status: String!
+  paymentId: String!
+  createdAt: DateTime!
+}
+
+type OrderItem {
+  artworkId: ID!
+  title: String!
+  unitPrice: Float!
+  qty: Int!
+}
+
+input OrderItemInput {
+  artworkId: ID!
+  title: String!
+  unitPrice: Float!
+  qty: Int!
+}
+
+type Payout { id: ID!, artistId: ID!, amount: Float!, currency: String!, status: String! }
+
+union SearchResult = SearchPayload
+type SearchPayload {
+  artworks: [Artwork!]!
+  artists: [Artist!]!
+}
+
+type AuthPayload { accessToken: String!, refreshToken: String }

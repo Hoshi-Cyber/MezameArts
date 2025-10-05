@@ -1,0 +1,22 @@
+[
+  {
+    "id": "painting",
+    "name": "Painting",
+    "slug": "painting"
+  },
+  {
+    "id": "photography",
+    "name": "Photography",
+    "slug": "photography"
+  },
+  {
+    "id": "sculpture",
+    "name": "Sculpture",
+    "slug": "sculpture"
+  },
+  {
+    "id": "digital",
+    "name": "Digital Art",
+    "slug": "digital-art"
+  }
+]

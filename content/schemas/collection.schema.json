@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mezamearts.com/schemas/",
+  "title": "Collection",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "slug",
+    "artworkIds",
+    "createdAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "description": {
+      "type": "string"
+    },
+    "artworkIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "curatorId": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

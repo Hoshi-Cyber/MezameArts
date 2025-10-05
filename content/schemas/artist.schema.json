@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mezamearts.com/schemas/",
+  "title": "Artist",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "slug",
+    "country",
+    "bio",
+    "avatar",
+    "verified",
+    "createdAt"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "bio": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "country": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "social": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "avatar": {
+      "type": "string",
+      "format": "uri"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
