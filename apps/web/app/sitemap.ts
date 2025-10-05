@@ -1,11 +1,25 @@
-export async function GET() {
-  const urls = ['/', '/artworks', '/artists'];
-  const body = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls
-    .map((u) => `<url><loc>${process.env.NEXT_PUBLIC_BASE_URL}${u}</loc></url>`)
-    .join('')}</urlset>`;
-  return new Response(body, {
-    headers: {
-      'Content-Type': 'application/xml',
-    },
-  });
+// apps/web/app/sitemap.ts
+import type { MetadataRoute } from "next";
+
+const BASE_URL =
+  process.env.NEXT_PUBLIC_BASE_URL ?? "https://mezamearts.netlify.app";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const staticPaths = [
+    "/",
+    "/artworks",
+    "/artists",
+    "/insights",
+    "/cart",
+    "/checkout",
+    "/account",
+  ];
+
+  return staticPaths.map((path) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: now,
+    changeFrequency: path === "/" ? "weekly" : "monthly",
+    priority: path === "/" ? 1 : 0.6,
+  }));
 }
