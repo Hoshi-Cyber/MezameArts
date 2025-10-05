@@ -1,7 +1,13 @@
 [build]
-  base = "apps/web"
+  base    = "apps/web"
   command = "npm ci && npm run build"
+  # publish path is relative to `base`
   publish = ".next"
+
+[build.environment]
+  # Pin Node to match your app’s engines and avoid EBADENGINE on Netlify
+  NODE_VERSION = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"

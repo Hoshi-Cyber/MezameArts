@@ -1,10 +1,20 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  // Root tsconfig for the monorepo. Avoids extending external configs so Netlify
+  // can build apps/web without having to install extra dev deps at the repo root.
   "compilerOptions": {
-    "composite": true,
-    "moduleResolution": "Node16",
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "preserve",
+
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
     "baseUrl": ".",
     "paths": {
       "@mezame/ui": ["packages/ui/src"],
